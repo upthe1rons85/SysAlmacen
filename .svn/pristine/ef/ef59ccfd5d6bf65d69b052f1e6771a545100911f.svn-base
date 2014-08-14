@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>U:\Octavio\Aplicaciones\SYSDENES\PUBLICACIONES\Almacen\|U:\Octavio\Aplicaciones\SYSDENES\PUBLICACIONES\Prueba Almacen\|U:\Octavio\Aplicaciones\SYSDENES\PUBLICACIONES\Contabilidad\Version 1.0.0.9\|C:\Users\vnieto\Desktop\compi\Version 1.0.0.2\|C:\Users\vnieto\Desktop\compi\</PublishUrlHistory>
+    <InstallUrlHistory>\\192.168.0.2\usuarios\Octavio\Aplicaciones\SYSDENES\PUBLICACIONES\Almacen\|\\192.168.0.2\usuarios\Octavio\Aplicaciones\SYSDENES\PUBLICACIONES\Prueba Almacen\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>es-ES</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

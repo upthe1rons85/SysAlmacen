@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1ACAE57-2FE6-414C-A890-5602196ED69B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.frmEntradas</StartupObject>
+    <StartupObject>WindowsApplication1.frmPrincipal</StartupObject>
+    <StartupObject>WindowsApplication1.frmPrincipal</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>SysAlmacen</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>U:\Octavio\Aplicaciones\SYSDENES\PUBLICACIONES\Almacen\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\192.168.0.2\usuarios\Octavio\Aplicaciones\SYSDENES\PUBLICACIONES\Almacen\</InstallUrl>
+    <ApplicationRevision>33</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\compilado_Almacen\</OutputPath>
+    <DocumentationFile>SysAlmacen.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SysAlmacen.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>DENES4.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C313819DE270248F67DAF01659BFB90224929BC6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SysAlmacen_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlmacenDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlmacenDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AlmacenDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlmacenDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AlmacenDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlmacenDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="clsInformeFamilias.vb" />
+    <Compile Include="clsInformeProductoPtoReorden1.vb" />
+    <Compile Include="clsInventarioTeorico.vb" />
+    <Compile Include="clsMttoProrrateo.vb" />
+    <Compile Include="clsProductosPaseProceso.vb" />
+    <Compile Include="DSDetalleMov.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDetalleMov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSInformeMov1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInformeMov1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSInformePuntoReorden.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInformePuntoReorden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSInfProductos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInfProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSInfProductos2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInfProductos2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSInvTeorico1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInvTeorico1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSInvTeorico11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInvTeorico11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSInvTeorico2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInvTeorico2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSInvTeorico3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInvTeorico3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSListadoProveedores.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSListadoProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSListadoProveedores.vb">
+      <DependentUpon>DSListadoProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSMovSalidasDevo.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMovSalidasDevo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSProdReorden.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSProdReorden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSReciboAlmacen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReciboAlmacen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSReciboAlmacen.vb">
+      <DependentUpon>DSReciboAlmacen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSSaldoProducto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSaldoProducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAyudaCodigo.Designer.vb">
+      <DependentUpon>FrmAyudaCodigo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAyudaCodigo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentasEngorda.Designer.vb">
+      <DependentUpon>frmCuentasEngorda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuentasEngorda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfProductos.Designer.vb">
+      <DependentUpon>frmInfProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfProductos2.Designer.vb">
+      <DependentUpon>frmInfProductos2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfProductos2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventarios.Designer.vb">
+      <DependentUpon>frmInventarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventarioTeorico.Designer.vb">
+      <DependentUpon>frmInventarioTeorico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventarioTeorico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoProveedores.Designer.vb">
+      <DependentUpon>frmListadoProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLlenaProrrateo.Designer.vb">
+      <DependentUpon>frmLlenaProrrateo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLlenaProrrateo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovSalidasDevo.Designer.vb">
+      <DependentUpon>frmMovSalidasDevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovSalidasDevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMttoProrrateo.Designer.vb">
+      <DependentUpon>frmMttoProrrateo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMttoProrrateo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductosPaseProceso.Designer.vb">
+      <DependentUpon>frmProductosPaseProceso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductosPaseProceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPTInformeDetalleMov.Designer.vb">
+      <DependentUpon>frmRPTInformeDetalleMov.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPTInformeDetalleMov.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPTInvTeorico.Designer.vb">
+      <DependentUpon>frmRPTInvTeorico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPTInvTeorico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPTInvTeorico2.Designer.vb">
+      <DependentUpon>frmRPTInvTeorico2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPTInvTeorico2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPTInvTeorico3.Designer.vb">
+      <DependentUpon>frmRPTInvTeorico3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPTInvTeorico3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPTListadoProveedores.Designer.vb">
+      <DependentUpon>frmRPTListadoProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPTListadoProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\DSInformeAlmacen.vb">
+      <DependentUpon>DSInformeAlmacen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DSInformeBusProd.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInformeBusProd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="clsBD.vb" />
+    <Compile Include="clsEntradas.vb" />
+    <Compile Include="clsFamilias.vb" />
+    <Compile Include="clsInformeMovimientos.vb" />
+    <Compile Include="clsProductos.vb" />
+    <Compile Include="clsSubFamilias.vb" />
+    <Compile Include="clsTools.vb" />
+    <Compile Include="clsUnidadesMedida.vb" />
+    <Compile Include="clsUsuarios.vb" />
+    <Compile Include="Reportes\DSInformeProducto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInformeProducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DSInformeProducto.vb">
+      <DependentUpon>DSInformeProducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DSMoviemientos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMoviemientos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformeProductoPuntoReorden.Designer.vb">
+      <DependentUpon>frmInformeProductoPuntoReorden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformeProductoPuntoReorden.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPTInformeProductoPuntoReorden.Designer.vb">
+      <DependentUpon>frmRPTInformeProductoPuntoReorden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPTInformeProductoPuntoReorden.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\DSInformeAlmacen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInformeAlmacen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarContraseña.Designer.vb">
+      <DependentUpon>frmCambiarContraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarContraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntradas.Designer.vb">
+      <DependentUpon>frmEntradas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntradas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFamilia.Designer.vb">
+      <DependentUpon>frmFamilia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFamilia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformeEntradas.Designer.vb">
+      <DependentUpon>frmInformeEntradas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformeEntradas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListSubfamilias.Designer.vb">
+      <DependentUpon>frmListSubfamilias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmListSubfamilias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListSubFamiNiv1.Designer.vb">
+      <DependentUpon>frmListSubFamiNiv1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmListSubFamiNiv1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilesUsuario.Designer.vb">
+      <DependentUpon>frmPerfilesUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfilesUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductos.Designer.vb">
+      <DependentUpon>frmProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetContraseña.Designer.vb">
+      <DependentUpon>frmResetContraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmResetContraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReciboAlmacen.Designer.vb">
+      <DependentUpon>frmReciboAlmacen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReciboAlmacen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubFamilias.Designer.vb">
+      <DependentUpon>frmSubFamilias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubFamilias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubFamiNiv2.Designer.vb">
+      <DependentUpon>frmSubFamiNiv2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubFamiNiv2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnidadesMedida.Designer.vb">
+      <DependentUpon>frmUnidadesMedida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnidadesMedida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdVariables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="frmSubFamiNiv1.Designer.vb">
+      <DependentUpon>frmSubFamiNiv1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubFamiNiv1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmRPTInformeMov.Designer.vb">
+      <DependentUpon>frmRPTInformeMov.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmRPTInformeMov.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmRPTMovSalidasDevo.Designer.vb">
+      <DependentUpon>frmRPTMovSalidasDevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmRPTMovSalidasDevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmRPTSaldoProducto.Designer.vb">
+      <DependentUpon>frmRPTSaldoProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmRPTSaldoProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmSaldoProducto.Designer.vb">
+      <DependentUpon>frmSaldoProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmSaldoProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmAyudaCodigo.resx">
+      <DependentUpon>FrmAyudaCodigo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuentasEngorda.resx">
+      <DependentUpon>frmCuentasEngorda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntradas.resx">
+      <DependentUpon>frmEntradas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFamilia.resx">
+      <DependentUpon>frmFamilia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformeEntradas.resx">
+      <DependentUpon>frmInformeEntradas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfProductos.resx">
+      <DependentUpon>frmInfProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfProductos2.resx">
+      <DependentUpon>frmInfProductos2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventarios.resx">
+      <DependentUpon>frmInventarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventarioTeorico.resx">
+      <DependentUpon>frmInventarioTeorico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoProveedores.resx">
+      <DependentUpon>frmListadoProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListSubfamilias.resx">
+      <DependentUpon>frmListSubfamilias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListSubFamiNiv1.resx">
+      <DependentUpon>frmListSubFamiNiv1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLlenaProrrateo.resx">
+      <DependentUpon>frmLlenaProrrateo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovSalidasDevo.resx">
+      <DependentUpon>frmMovSalidasDevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMttoProrrateo.resx">
+      <DependentUpon>frmMttoProrrateo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilesUsuario.resx">
+      <DependentUpon>frmPerfilesUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductos.resx">
+      <DependentUpon>frmProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductosPaseProceso.resx">
+      <DependentUpon>frmProductosPaseProceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResetContraseña.resx">
+      <DependentUpon>frmResetContraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPTInformeDetalleMov.resx">
+      <DependentUpon>frmRPTInformeDetalleMov.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPTInformeProductoPuntoReorden.resx">
+      <DependentUpon>frmRPTInformeProductoPuntoReorden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPTInvTeorico.resx">
+      <DependentUpon>frmRPTInvTeorico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPTInvTeorico2.resx">
+      <DependentUpon>frmRPTInvTeorico2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPTInvTeorico3.resx">
+      <DependentUpon>frmRPTInvTeorico3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPTListadoProveedores.resx">
+      <DependentUpon>frmRPTListadoProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubFamilias.resx">
+      <DependentUpon>frmSubFamilias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubFamiNiv2.resx">
+      <DependentUpon>frmSubFamiNiv2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnidadesMedida.resx">
+      <DependentUpon>frmUnidadesMedida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformeProductoPuntoReorden.resx">
+      <DependentUpon>frmInformeProductoPuntoReorden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubFamiNiv1.resx">
+      <DependentUpon>frmSubFamiNiv1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReciboAlmacen.resx">
+      <DependentUpon>frmReciboAlmacen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmRPTInformeMov.resx">
+      <DependentUpon>frmRPTInformeMov.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmRPTMovSalidasDevo.resx">
+      <DependentUpon>frmRPTMovSalidasDevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmRPTSaldoProducto.resx">
+      <DependentUpon>frmRPTSaldoProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmSaldoProducto.resx">
+      <DependentUpon>frmSaldoProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RPTInformeMov.rdlc" />
+    <EmbeddedResource Include="Reportes\RPTInformeMovSalidasDevo.rdlc" />
+    <EmbeddedResource Include="Reportes\RPTInformeProducto.rdlc" />
+    <EmbeddedResource Include="Reportes\RPTReciboAlmacen.rdlc" />
+    <EmbeddedResource Include="Reportes\RPTSaldoProducto.rdlc" />
+    <EmbeddedResource Include="RPTInformeDetalleMov.rdlc" />
+    <EmbeddedResource Include="RPTInfProductos.rdlc" />
+    <EmbeddedResource Include="RPTInfProductos2.rdlc" />
+    <EmbeddedResource Include="RPTInvTeorico.rdlc" />
+    <EmbeddedResource Include="RPTInvTeorico2.rdlc" />
+    <EmbeddedResource Include="RPTInvTeorico3.rdlc" />
+    <EmbeddedResource Include="RPTListadoProveedores.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AlmacenDataSet11.xsc">
+      <DependentUpon>AlmacenDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlmacenDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlmacenDataSet11.xss">
+      <DependentUpon>AlmacenDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDataSet2.xsc">
+      <DependentUpon>AlmacenDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlmacenDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlmacenDataSet2.xss">
+      <DependentUpon>AlmacenDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDataSet3.xsc">
+      <DependentUpon>AlmacenDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlmacenDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlmacenDataSet3.xss">
+      <DependentUpon>AlmacenDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DSDetalleMov.xsc">
+      <DependentUpon>DSDetalleMov.xsd</DependentUpon>
+    </None>
+    <None Include="DSDetalleMov.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDetalleMov.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSDetalleMov.xss">
+      <DependentUpon>DSDetalleMov.xsd</DependentUpon>
+    </None>
+    <None Include="DSInformeMov1.xsc">
+      <DependentUpon>DSInformeMov1.xsd</DependentUpon>
+    </None>
+    <None Include="DSInformeMov1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInformeMov1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSInformeMov1.xss">
+      <DependentUpon>DSInformeMov1.xsd</DependentUpon>
+    </None>
+    <None Include="DSInformePuntoReorden.xsc">
+      <DependentUpon>DSInformePuntoReorden.xsd</DependentUpon>
+    </None>
+    <None Include="DSInformePuntoReorden.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInformePuntoReorden.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSInformePuntoReorden.xss">
+      <DependentUpon>DSInformePuntoReorden.xsd</DependentUpon>
+    </None>
+    <None Include="DSInfProductos.xsc">
+      <DependentUpon>DSInfProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DSInfProductos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInfProductos.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSInfProductos.xss">
+      <DependentUpon>DSInfProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DSInfProductos2.xsc">
+      <DependentUpon>DSInfProductos2.xsd</DependentUpon>
+    </None>
+    <None Include="DSInfProductos2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInfProductos2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSInfProductos2.xss">
+      <DependentUpon>DSInfProductos2.xsd</DependentUpon>
+    </None>
+    <None Include="DSInvTeorico1.xsc">
+      <DependentUpon>DSInvTeorico1.xsd</DependentUpon>
+    </None>
+    <None Include="DSInvTeorico1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInvTeorico1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSInvTeorico1.xss">
+      <DependentUpon>DSInvTeorico1.xsd</DependentUpon>
+    </None>
+    <None Include="DSInvTeorico11.xsc">
+      <DependentUpon>DSInvTeorico11.xsd</DependentUpon>
+    </None>
+    <None Include="DSInvTeorico11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInvTeorico11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSInvTeorico11.xss">
+      <DependentUpon>DSInvTeorico11.xsd</DependentUpon>
+    </None>
+    <None Include="DSInvTeorico2.xsc">
+      <DependentUpon>DSInvTeorico2.xsd</DependentUpon>
+    </None>
+    <None Include="DSInvTeorico2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInvTeorico2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSInvTeorico2.xss">
+      <DependentUpon>DSInvTeorico2.xsd</DependentUpon>
+    </None>
+    <None Include="DSInvTeorico3.xsc">
+      <DependentUpon>DSInvTeorico3.xsd</DependentUpon>
+    </None>
+    <None Include="DSInvTeorico3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInvTeorico3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSInvTeorico3.xss">
+      <DependentUpon>DSInvTeorico3.xsd</DependentUpon>
+    </None>
+    <None Include="DSListadoProveedores.xsc">
+      <DependentUpon>DSListadoProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DSListadoProveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSListadoProveedores.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSListadoProveedores.xss">
+      <DependentUpon>DSListadoProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DSMovSalidasDevo.xsc">
+      <DependentUpon>DSMovSalidasDevo.xsd</DependentUpon>
+    </None>
+    <None Include="DSMovSalidasDevo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMovSalidasDevo.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSMovSalidasDevo.xss">
+      <DependentUpon>DSMovSalidasDevo.xsd</DependentUpon>
+    </None>
+    <None Include="DSProdReorden.xsc">
+      <DependentUpon>DSProdReorden.xsd</DependentUpon>
+    </None>
+    <None Include="DSProdReorden.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSProdReorden.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSProdReorden.xss">
+      <DependentUpon>DSProdReorden.xsd</DependentUpon>
+    </None>
+    <None Include="DSReciboAlmacen.xsc">
+      <DependentUpon>DSReciboAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="DSReciboAlmacen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReciboAlmacen.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSReciboAlmacen.xss">
+      <DependentUpon>DSReciboAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="DSSaldoProducto.xsc">
+      <DependentUpon>DSSaldoProducto.xsd</DependentUpon>
+    </None>
+    <None Include="DSSaldoProducto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSaldoProducto.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSSaldoProducto.xss">
+      <DependentUpon>DSSaldoProducto.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSInformeBusProd.xsc">
+      <DependentUpon>DSInformeBusProd.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSInformeBusProd.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInformeBusProd.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\DSInformeBusProd.xss">
+      <DependentUpon>DSInformeBusProd.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="Reportes\DSInformeProducto.xsc">
+      <DependentUpon>DSInformeProducto.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSInformeProducto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInformeProducto.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\DSInformeProducto.xss">
+      <DependentUpon>DSInformeProducto.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSMoviemientos.xsc">
+      <DependentUpon>DSMoviemientos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSMoviemientos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMoviemientos.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\DSMoviemientos.xss">
+      <DependentUpon>DSMoviemientos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSInformeAlmacen.xsc">
+      <DependentUpon>DSInformeAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSInformeAlmacen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInformeAlmacen.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\DSInformeAlmacen.xss">
+      <DependentUpon>DSInformeAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SysAlmacen_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DENES4.ico" />
+    <None Include="Resources\refresh_02.ico" />
+    <None Include="Resources\...ico" />
+    <None Include="Resources\save_C.mayseg1.ico" />
+    <None Include="Resources\print1.ico" />
+    <None Include="Resources\print.ico" />
+    <None Include="Resources\ico_buscar1.gif" />
+    <None Include="Resources\save_C.mayseg.ico" />
+    <None Include="Resources\refresh_C.contra.ico" />
+    <None Include="Resources\user1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,3 @@
+﻿Public Class Informe_de_Producto_en_Punto_de_Reorden
+
+End Class
